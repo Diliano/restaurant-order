@@ -12,7 +12,7 @@ const getMenuHTML = () => {
                     <p class="item-ingredients">${ingredients.join(",")}</p>
                     <p class="item-price">$${price}</p>
                 </div>
-                <button class="add-button">+</button>
+                <button class="add-button" aria-label="Add ${name} to your order">+</button>
             </div>
         `;
     }).join("");
@@ -21,3 +21,4 @@ const getMenuHTML = () => {
 const renderMenu = () => document.getElementById("menu").innerHTML = getMenuHTML();
 
 renderMenu();
+
