@@ -8,7 +8,6 @@ body {
 .container {
     max-width: 320px;
     margin: 0px auto;
-    border: 1px solid;
 }
 
 .header {
@@ -17,23 +16,72 @@ body {
     height: 90px;
 }
 
+.item-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc; 
+    padding: 0px 20px;
+}
+
+.item-text-container {
+    flex-grow: 1;
+    padding-left: 10px; 
+}
+
 /* typography */
 
 h1,
 h2 {
     color: #FFF; 
-    font-style: normal;
-    font-weight: 400;
 }
 
 h1 {
-    margin: 15px 0px 3px 20px;
+    margin: 0;
+    padding: 15px 0px 3px 20px;
     font-size: 20px;  
-    line-height: 24px; 
 }
 
 h2 {
     margin: 0px 0px 0px 20px;
     font-size: 12px;
-    line-height: 13.798px; 
+}
+
+.item-name {
+    margin: 0;
+    font-size: 15px;
+}
+
+.item-ingredients {
+    margin: 3px 0px 5px;
+    color: #8B8B8B;
+    font-size: 9px;
+}
+
+.item-price {
+    margin: 0;
+    font-size: 10px;
+}
+
+/* images */
+
+.item-emoji {
+    font-size: 41px;
+}
+
+/* buttons */
+
+.add-button {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 1px solid lightgrey;
+    background: transparent;
+    color: #3C3C3C;
+    font-weight: lighter;
+}
+
+.add-button:hover, 
+.add-button:focus {
+    opacity: 0.5;
 }
