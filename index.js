@@ -12,7 +12,7 @@ const getMenuHTML = () => {
                     <p class="item-ingredients">${ingredients.join(",")}</p>
                     <p class="item-price">$${price}</p>
                 </div>
-                <button class="add-button" aria-label="Add ${name} to your order">+</button>
+                <button class="add-button" aria-label="Add ${name} to your order" data-id="${id}">+</button>
             </div>
         `;
     }).join("");
