@@ -29,6 +29,18 @@ body {
     padding-left: 10px; 
 }
 
+.order-item {
+    display: flex;
+    justify-content: space-between; 
+    padding: 0px 20px;
+    margin-bottom: 5px;
+}
+
+.order-item-details {
+    display: flex;
+    gap: 5px;
+}
+
 /* typography */
 
 h1,
@@ -63,6 +75,22 @@ h2 {
     font-size: 10px;
 }
 
+.order-title {
+    text-align: center;
+    font-size: 15px;
+    margin: 20px 0px 25px;
+}
+
+.order-item-name {
+    font-size: 15px;
+    margin: 0;
+}
+
+.order-item-price {
+    font-size: 15px;
+    margin: 0;
+}
+
 /* images */
 
 .item-emoji {
@@ -84,4 +112,12 @@ h2 {
 .add-button:hover, 
 .add-button:focus {
     opacity: 0.5;
+}
+
+.remove-button {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #BBB;
+    font-size: 6px;
+    border: none;
+    background: transparent;
 }
