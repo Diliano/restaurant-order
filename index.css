@@ -5,6 +5,12 @@ body {
 
 /* layout */
 
+.item-container,
+.order-item,
+.order-total {
+    padding: 0px 20px;
+}
+
 .container {
     max-width: 320px;
     margin: 0px auto;
@@ -21,7 +27,6 @@ body {
     align-items: center;
     justify-content: space-between;
     border-bottom: 1px solid #ccc; 
-    padding: 0px 20px;
 }
 
 .item-text-container {
@@ -32,7 +37,6 @@ body {
 .order-item {
     display: flex;
     justify-content: space-between; 
-    padding: 0px 20px;
     margin-bottom: 5px;
 }
 
@@ -49,7 +53,6 @@ body {
 .order-total {
     display: flex;
     justify-content: space-between;
-    padding: 0px 20px;
     margin-bottom: 15px;
 }
 
@@ -105,6 +108,21 @@ h2 {
 
 /* buttons */
 
+button {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+button:hover,
+button:focus {
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.remove-button,
+.order-button {
+    border: none;
+}
+
 .add-button {
     width: 44px;
     height: 44px;
@@ -115,42 +133,20 @@ h2 {
     font-weight: lighter;
 }
 
-.add-button:hover, 
-.add-button:focus {
-    opacity: 0.5;
-    cursor: pointer;
-}
-
 .remove-button {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: #BBB;
     font-size: 6px;
-    border: none;
     background: transparent;
-}
-
-.remove-button:hover,
-.remove-button:focus {
-    opacity: 0.5;
-    cursor: pointer;
 }
 
 .order-button {
     width: 100%;
     margin-bottom: 30px;
-    border: none;
     border-radius: 3px;
     background: #16DB99;
     box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
     padding: 12px 0px; 
     color: #FFF;
-    font-family: Verdana;
     font-size: 9px;
     font-weight: 700;
-}
-
-.order-button:hover,
-.order-button:focus {
-    opacity: 0.5;
-    cursor: pointer;
 }
