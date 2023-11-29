@@ -5,10 +5,14 @@ let order = [];
 document.addEventListener("click", function(event) {
     if (event.target.classList.contains("add-button")) {
         const itemId = Number(event.target.dataset.id);
-        console.log(itemId);
-        console.log(typeof itemId);  
+        addToOrder(itemId);
     }
 });
+
+const addToOrder = itemId => {
+    const item = menuArray.find(item => item.id === itemId);
+    order.push(item);
+};
 
 const getMenuHTML = () => {
     return menuArray.map(item => {
