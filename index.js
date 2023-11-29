@@ -15,8 +15,14 @@ const addToOrder = itemId => {
     renderOrderDetails();
 };
 
+const calculateTotalPrice = () => {
+    return order.reduce((total, item) => total + item.price, 0);
+};
+
 const renderOrderDetails = () => {
-    const orderHTML = order.map(item => {
+    const totalPrice = calculateTotalPrice();
+    
+    let orderHTML = order.map(item => {
         const {name, price} = item;
          
         return `
@@ -29,6 +35,16 @@ const renderOrderDetails = () => {
             </div>
         `
     }).join("");  
+    
+    orderHTML += `
+        <section class="container order-total-container">
+            <div class="order-total">
+                <p>Total price:</p>
+                <p>$${totalPrice}</p>
+            </div>
+            <button class="order-button">Complete order</button>
+        </section>
+    `;
     
     document.getElementById("order-summary").innerHTML = orderHTML;
 };
