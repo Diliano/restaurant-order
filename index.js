@@ -1,5 +1,15 @@
 import { menuArray } from "./data.js";
 
+let order = [];
+
+document.addEventListener("click", function(event) {
+    if (event.target.classList.contains("add-button")) {
+        const itemId = Number(event.target.dataset.id);
+        console.log(itemId);
+        console.log(typeof itemId);  
+    }
+});
+
 const getMenuHTML = () => {
     return menuArray.map(item => {
         const {name, ingredients, id, price, emoji} = item;
@@ -21,4 +31,3 @@ const getMenuHTML = () => {
 const renderMenu = () => document.getElementById("menu").innerHTML = getMenuHTML();
 
 renderMenu();
-
