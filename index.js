@@ -12,6 +12,25 @@ document.addEventListener("click", function(event) {
 const addToOrder = itemId => {
     const item = menuArray.find(item => item.id === itemId);
     order.push(item);
+    renderOrderDetails();
+};
+
+const renderOrderDetails = () => {
+    const orderHTML = order.map(item => {
+        const {name, price} = item;
+         
+        return `
+            <div class="order-item">
+                <div class="order-item-details">
+                    <p class="order-item-name">${name}</p>
+                    <button class="remove-button">remove</button>
+                </div>
+                <p class="order-item-price">$${price}</p>
+            </div>
+        `
+    }).join("");  
+    
+    document.getElementById("order-summary").innerHTML = orderHTML;
 };
 
 const getMenuHTML = () => {
