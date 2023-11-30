@@ -12,6 +12,10 @@ document.addEventListener("click", function(event) {
         const itemId = Number(event.target.dataset.id);
         removeFromOrder(itemId);
     }
+    
+    if (event.target.classList.contains("order-button")) {
+        showModal();
+    }
 });
 
 const addToOrder = itemId => {
@@ -45,6 +49,10 @@ const calculateTotalPrice = () => {
     return order.reduce((total, item) => total + (item.price * item.quantity), 0);
 };
 
+const showModal = () => {
+    document.getElementById("modal").style.display = "block";
+};
+
 const renderOrderDetails = () => {
     
     const totalPrice = calculateTotalPrice();
@@ -69,7 +77,7 @@ const renderOrderDetails = () => {
                 <p>Total price:</p>
                 <p>$${totalPrice}</p>
             </div>
-            <button class="order-button">Complete order</button>
+            <button class="order-button" id="order-button">Complete order</button>
         </section>
     `;
     
