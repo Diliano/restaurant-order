@@ -16,6 +16,10 @@ document.addEventListener("click", function(event) {
     if (event.target.classList.contains("order-button")) {
         showModal();
     }
+    
+    if (event.target.classList.contains("close-modal-button")) {
+        closeModal();
+    }
 });
 
 const addToOrder = itemId => {
@@ -51,6 +55,10 @@ const calculateTotalPrice = () => {
 
 const showModal = () => {
     document.getElementById("modal").style.display = "block";
+};
+
+const closeModal = () => {
+    document.getElementById("modal").style.display = "none";
 };
 
 const renderOrderDetails = () => {

@@ -76,8 +76,13 @@ body {
     background-color: whitesmoke;
 }
 
+.close-modal-button-container {
+    margin: 5px;
+    text-align: right;
+}
+
 .modal-content {
-    margin-top: 40px;
+    margin-top: 20px;
     text-align: center;
 }
 
@@ -131,7 +136,7 @@ h2 {
 .modal-title {
     font-family: Verdana;
     font-weight: 700;
-    margin: 20px 0px;
+    margin: 10px 0px;
 }
 
 /* images */
