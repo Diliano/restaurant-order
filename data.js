@@ -2,13 +2,15 @@ export const menuArray = [
     {
         name: "Pizza",
         ingredients: ["pepperphoni", "mushroom", "cheese"],
-        id: 0,
+        quantity: 0,
         price: 14,
-        emoji: "🍕"
+        emoji: "🍕",
+        id: 0
     },
     {
         name: "Megaburger",
         ingredients: ["Double patty", "cheese", "lettuce"],
+        quantity: 0,
         price: 12,
         emoji: "🍔",
         id: 1
@@ -16,6 +18,7 @@ export const menuArray = [
         {
         name: "Beer",
         ingredients: ["grain, hops, yeast, water"],
+        quantity: 0,
         price: 12,
         emoji: "🍺",
         id: 2
