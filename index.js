@@ -29,8 +29,15 @@ const addToOrder = itemId => {
 };
 
 const removeFromOrder = itemId => {
-    const itemIndex = order.findIndex(item => item.id === itemId);
-    order.splice(itemIndex, 1);
+    const existingItem = order.find(item => item.id === itemId);
+    
+    if (existingItem.quantity > 1) {
+        existingItem.quantity--;
+    } else {
+        const itemIndex = order.findIndex(item => item.id === itemId);
+        order.splice(itemIndex, 1);
+    }
+    
     renderOrderDetails();
 }
 
