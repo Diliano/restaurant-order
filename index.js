@@ -56,7 +56,7 @@ const renderOrderDetails = () => {
             <div class="order-item">
                 <div class="order-item-details">
                     <p class="order-item-name">${name} (x${quantity})</p>
-                    <button class="remove-button" data-id="${id}">remove</button>
+                    <button class="remove-button" aria-label="Remove ${name} from your order" data-id="${id}">remove</button>
                 </div>
                 <p class="order-item-price">$${price * quantity}</p>
             </div>
