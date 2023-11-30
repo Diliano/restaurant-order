@@ -77,7 +77,7 @@ const renderOrderDetails = () => {
                 <p>Total price:</p>
                 <p>$${totalPrice}</p>
             </div>
-            <button class="order-button" id="order-button">Complete order</button>
+            <button class="order-button" id="order-button" aria-label="Complete your order">Complete order</button>
         </section>
     `;
     
