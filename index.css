@@ -61,6 +61,26 @@ body {
     justify-content: center;
 }
 
+.modal {
+    display: none;
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    height: 280px;
+    width: 290px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 6px 2px #666;
+    background-color: whitesmoke;
+}
+
+.modal-content {
+    margin-top: 40px;
+    text-align: center;
+}
+
 /* typography */
 
 h1,
@@ -81,6 +101,11 @@ h1,
     font-size: 10px;
 }
 
+h2,
+.modal-title {
+    font-size: 12px;
+}
+
 p {
     font-size: 15px;
 }
@@ -92,7 +117,6 @@ h1 {
 
 h2 {
     margin: 0px 0px 0px 20px;
-    font-size: 12px;
 }
 
 .item-ingredients {
@@ -104,15 +128,22 @@ h2 {
     margin: 20px 0px 25px;
 }
 
+.modal-title {
+    font-family: Verdana;
+    font-weight: 700;
+    margin: 20px 0px;
+}
+
 /* images */
 
 .item-emoji {
     font-size: 41px;
 }
 
-/* buttons */
+/* buttons and input */
 
-button {
+button,
+input {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
@@ -123,8 +154,19 @@ button:focus {
 }
 
 .remove-button,
-.order-button {
+.order-button,
+.pay-button {
     border: none;
+}
+
+.order-button,
+.pay-button {
+    background: #16DB99;
+    border-radius: 3px;
+    color: #FFF;
+    font-weight: 700;
+    padding: 12px 0px; 
+    font-size: 9px;
 }
 
 .add-button {
@@ -146,11 +188,21 @@ button:focus {
 .order-button {
     width: 100%;
     margin-bottom: 30px;
-    border-radius: 3px;
-    background: #16DB99;
     box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
-    padding: 12px 0px; 
-    color: #FFF;
-    font-size: 9px;
-    font-weight: 700;
+}
+
+.pay-button {
+    width: 95%;
+    margin-top: 20px;
+}
+
+input {
+    margin: 5px 0px;
+    padding: 5px;
+    border: 1px solid #757575;
+    border-radius: 3px;
+    color: #757575;
+    font-size: 12px;
+    font-weight: 400;
+    width: 90%;
 }
