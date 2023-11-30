@@ -15,8 +15,16 @@ document.addEventListener("click", function(event) {
 });
 
 const addToOrder = itemId => {
-    const item = menuArray.find(item => item.id === itemId);
-    order.push(item);
+    const existingItem = order.find(item => item.id === itemId);
+    
+    if (existingItem) {
+        existingItem.quantity++;
+    } else {
+        const item = menuArray.find(item => item.id === itemId);
+        item.quantity++;
+        order.push(item);
+    }
+
     renderOrderDetails();
 };
 
@@ -27,7 +35,7 @@ const removeFromOrder = itemId => {
 }
 
 const calculateTotalPrice = () => {
-    return order.reduce((total, item) => total + item.price, 0);
+    return order.reduce((total, item) => total + (item.price * item.quantity), 0);
 };
 
 const renderOrderDetails = () => {
@@ -35,15 +43,15 @@ const renderOrderDetails = () => {
     const totalPrice = calculateTotalPrice();
     
     let orderHTML = order.map(item => {
-        const {name, price, id} = item;
+        const {name, price, id, quantity} = item;
          
         return `
             <div class="order-item">
                 <div class="order-item-details">
-                    <p class="order-item-name">${name}</p>
+                    <p class="order-item-name">${name} (x${quantity})</p>
                     <button class="remove-button" data-id="${id}">remove</button>
                 </div>
-                <p class="order-item-price">$${price}</p>
+                <p class="order-item-price">$${price * quantity}</p>
             </div>
         `
     }).join("");  
