@@ -56,6 +56,11 @@ body {
     margin-bottom: 15px;
 }
 
+.order-title {
+    display: none;
+    justify-content: center;
+}
+
 /* typography */
 
 h1,
@@ -96,7 +101,6 @@ h2 {
 }
 
 .order-title {
-    text-align: center;
     margin: 20px 0px 25px;
 }
 

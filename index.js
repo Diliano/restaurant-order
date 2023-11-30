@@ -31,6 +31,7 @@ const calculateTotalPrice = () => {
 };
 
 const renderOrderDetails = () => {
+    
     const totalPrice = calculateTotalPrice();
     
     let orderHTML = order.map(item => {
@@ -57,7 +58,13 @@ const renderOrderDetails = () => {
         </section>
     `;
     
-    document.getElementById("order-summary").innerHTML = orderHTML;
+    if (order.length === 0) {
+        document.getElementById("order-summary").innerHTML = "";
+        document.getElementById("order-title").style.display = "none";
+    } else {
+        document.getElementById("order-title").style.display = "flex";
+        document.getElementById("order-summary").innerHTML = orderHTML;
+    }
 };
 
 const getMenuHTML = () => {
