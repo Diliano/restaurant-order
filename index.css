@@ -193,12 +193,17 @@ button:focus {
 .order-button {
     width: 100%;
     margin-bottom: 30px;
-    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
 }
 
 .pay-button {
     width: 95%;
     margin-top: 20px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 input {
