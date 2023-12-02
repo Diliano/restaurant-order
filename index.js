@@ -55,10 +55,24 @@ const calculateTotalPrice = () => {
 
 const showModal = () => {
     document.getElementById("modal").style.display = "block";
+    disableBackgroundInteraction(true);
 };
 
 const closeModal = () => {
     document.getElementById("modal").style.display = "none";
+    disableBackgroundInteraction(false);
+};
+
+const disableBackgroundInteraction = disable => {
+    const main = document.getElementById("main");
+    
+    if (disable) {
+        main.style.pointerEvents = "none";
+        main.style.opacity = "0.5";
+    } else {
+        main.style.pointerEvents = "auto";
+        main.style.opacity = "1";
+    }
 };
 
 const renderOrderDetails = () => {
