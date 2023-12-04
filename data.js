@@ -9,7 +9,7 @@ export const menuArray = [
     },
     {
         name: "Megaburger",
-        ingredients: ["Double patty", "cheese", "lettuce"],
+        ingredients: ["double patty", "cheese", "lettuce"],
         quantity: 0,
         price: 12,
         emoji: "🍔",
