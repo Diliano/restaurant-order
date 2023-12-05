@@ -60,6 +60,7 @@ const showModal = () => {
 
 const closeModal = () => {
     document.getElementById("modal").style.display = "none";
+    document.getElementById("payment-form").reset();
     disableBackgroundInteraction(false);
 };
 
