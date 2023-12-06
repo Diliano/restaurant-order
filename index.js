@@ -1,6 +1,7 @@
 import { menuArray } from "./data.js";
 
 let order = [];
+const paymentForm = document.getElementById("payment-form");
 
 document.addEventListener("click", function(event) {
     if (event.target.classList.contains("add-button")) {
@@ -19,6 +20,11 @@ document.addEventListener("click", function(event) {
     
     if (event.target.classList.contains("close-modal-button")) {
         closeModal();
+    }
+    
+    if (event.target.classList.contains("pay-button")) {
+        event.preventDefault();
+        completeOrder();
     }
 });
 
@@ -60,7 +66,7 @@ const showModal = () => {
 
 const closeModal = () => {
     document.getElementById("modal").style.display = "none";
-    document.getElementById("payment-form").reset();
+    paymentForm.reset();
     disableBackgroundInteraction(false);
 };
 
@@ -74,6 +80,22 @@ const disableBackgroundInteraction = disable => {
         main.style.pointerEvents = "auto";
         main.style.opacity = "1";
     }
+};
+
+const completeOrder = () => {
+    
+    const paymentFormData = new FormData(paymentForm);
+    const name = paymentFormData.get("name");
+    
+    closeModal();
+    document.getElementById("order-title").style.display = "none";
+    
+    document.getElementById("order-summary").innerHTML = `
+        <p>Thanks, ${name}! Your order is on its way!</p>
+    `;
+    
+    order = [];
+    console.log(order); 
 };
 
 const renderOrderDetails = () => {
