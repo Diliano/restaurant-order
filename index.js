@@ -28,9 +28,9 @@ const addToOrder = itemId => {
     if (existingItem) {
         existingItem.quantity++;
     } else {
-        const item = menuArray.find(item => item.id === itemId);
-        item.quantity++;
-        order.push(item);
+        const dataItem = menuArray.find(item => item.id === itemId);
+        const orderItem = { ...dataItem, quantity: 1};
+        order.push(orderItem);
     }
 
     renderOrderDetails();
