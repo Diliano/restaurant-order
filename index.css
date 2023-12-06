@@ -139,6 +139,16 @@ h2 {
     margin: 10px 0px;
 }
 
+.order-success-message {
+    color: #065F46;
+    background: #ECFDF5;
+    font-size: 17px;
+    text-align: center;
+    margin-top: 20px;
+    padding: 25px 30px;
+    border-radius: 3px;
+}
+
 /* images */
 
 .item-emoji {

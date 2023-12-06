@@ -91,11 +91,10 @@ const completeOrder = () => {
     document.getElementById("order-title").style.display = "none";
     
     document.getElementById("order-summary").innerHTML = `
-        <p>Thanks, ${name}! Your order is on its way!</p>
+        <p class="order-success-message">Thanks, ${name}! Your order is on its way!</p>
     `;
     
     order = [];
-    console.log(order); 
 };
 
 const renderOrderDetails = () => {
