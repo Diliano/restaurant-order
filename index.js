@@ -21,11 +21,11 @@ document.addEventListener("click", function(event) {
     if (event.target.classList.contains("close-modal-button")) {
         closeModal();
     }
-    
-    if (event.target.classList.contains("pay-button")) {
-        event.preventDefault();
-        completeOrder();
-    }
+});
+
+paymentForm.addEventListener("submit", function(event) {
+    event.preventDefault();
+    completeOrder();
 });
 
 const addToOrder = itemId => {
